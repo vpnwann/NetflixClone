@@ -1,0 +1,19 @@
+
+<div>
+      <h1>Popular TV Shows</h1>
+      <ul>
+        {shows.length === 0 ? (
+          <li>No TV shows found.</li>
+        ) : (
+          shows.map((show) => (
+            <li key={show.id}>
+              <h2>{show.name}</h2>
+              <p>Overview: {show.overview}</p>
+              <p>First Air Date: {show.first_air_date}</p>
+              <p>Vote Average: {show.poster_path}</p>
+              <img src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}></img>
+            </li>
+          ))
+        )}
+      </ul>
+    </div>
